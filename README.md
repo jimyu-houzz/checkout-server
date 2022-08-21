@@ -1,4 +1,7 @@
 ### This is a basic checkout API server built with FastAPI and MySQL. <br/>
+![image](https://user-images.githubusercontent.com/52182874/185791446-c1a40f51-ced0-4cd1-84a6-44a0d135fc8c.png)
+
+
 You can:
 - add/remove products to cart
 - checkout items 
@@ -28,9 +31,9 @@ docker-compose up
 
 # Start Command
 
-`python -m uvicorn app.app`<br/>
+`python -m uvicorn app.app:app`<br/>
 or for dev environment, run:<br/>
-`python -m uvicorn app.app --reload`
+`python -m uvicorn app.app:app --reload`
 
 ## Connection to MySQL
 `mysql -h 127.0.0.1 -P 3307 -u root -p` <br/>
