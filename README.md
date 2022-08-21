@@ -1,4 +1,7 @@
 ### This is a basic checkout API server built with FastAPI and MySQL. <br/>
+![image](https://user-images.githubusercontent.com/52182874/185791446-c1a40f51-ced0-4cd1-84a6-44a0d135fc8c.png)
+
+
 You can:
 - add/remove products to cart
 - checkout items 
