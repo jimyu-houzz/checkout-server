@@ -3,9 +3,9 @@ from typing import Optional
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
-from app.models.Product import ProductNotFoundException
-from app.models.User import UserNotFoundException
-from app.models.Cart import Cart, CartModel
+from app.models.product import ProductNotFoundException
+from app.models.user import UserNotFoundException
+from app.models.cart import Cart, CartModel
 
 router = APIRouter(
     prefix='/cart',

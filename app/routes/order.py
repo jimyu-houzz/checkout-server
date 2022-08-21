@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-from app.models.Order import (
+from app.models.order import (
     Order,
     BaseOrderException,
     CreateOrderPayload,
@@ -9,7 +9,7 @@ from app.models.Order import (
     GetOrdersResponse,
     OrderResponeModel,
 )
-from app.models.User import UserNotFoundException
+from app.models.user import UserNotFoundException
 
 router = APIRouter(
     prefix='/order',

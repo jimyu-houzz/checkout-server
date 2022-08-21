@@ -3,7 +3,7 @@ from typing import List
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-from app.models.User import User, UserNotFoundException, UserModel
+from app.models.user import User, UserNotFoundException, UserModel
 
 router = APIRouter(
     prefix='/user',

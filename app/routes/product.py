@@ -3,7 +3,7 @@ from typing import List
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-from app.models.Product import Product, ProductNotFoundException, ProductModel
+from app.models.product import Product, ProductNotFoundException, ProductModel
 
 router = APIRouter(
     prefix='/product',
