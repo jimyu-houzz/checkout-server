@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 from app.db import conn
 from app.db.base import connection_conf_d
 from app.models.User import User, UserNotFoundException
-from app.models.Cart import CartModel, Cart
+from app.models.Cart import Cart
 
 GET_ORDER_COLUMNS = ('order_id', 'user_id', 'product_id', 'quantity', 'total', 'created')
 

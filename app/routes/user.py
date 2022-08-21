@@ -20,7 +20,7 @@ class GetUsersReponseModel(BaseModel):
 
 
 @router.get(
-    '/get_users',
+    '/get',
     response_model=GetUsersReponseModel,
     description='Get all users.'
 )
@@ -34,9 +34,9 @@ def get_users():
     response_model=UserResponseModel,
     description='For simplicity, add/remove user functionalities are not implemented.'
 )
-def get(user_id: str):
+def get_user(user_id: str):
     try:
         user = User(user_id).get()
     except UserNotFoundException as e:
-        raise HTTPException(status_code=404, detail=e.detail)
+        raise HTTPException(status_code=e.status_code, detail=e.detail)
     return {'user': user}
