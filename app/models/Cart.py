@@ -2,8 +2,8 @@ from typing import List, Optional
 
 from pydantic import BaseModel
 
-from app.models.User import User, UserNotFoundException
-from app.models.Product import Product, ProductNotFoundException
+from app.models.user import User, UserNotFoundException
+from app.models.product import Product, ProductNotFoundException
 from app.db import conn
 
 CART_COLUMNS = ('product_id', 'quantity')
