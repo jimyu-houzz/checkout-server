@@ -40,3 +40,7 @@ or for dev environment, run:<br/>
 # API Documents
 Utilizes OpenAPI, you can also run the APIs from below url.<br/>
 `localhost:8000/docs#`
+
+# Test Cases
+We use pytest to run testcases, on root directory, and inside virtual environment, run:<br/>
+`python -m pytest app/tests/`

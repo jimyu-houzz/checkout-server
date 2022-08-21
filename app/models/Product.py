@@ -16,7 +16,7 @@ class ProductModel(BaseModel):
 
 
 class ProductNotFoundException(Exception):
-    statuc_code = 404
+    status_code = 404
     detail = 'Produuct not found'
 
 

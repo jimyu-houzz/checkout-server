@@ -20,7 +20,7 @@ class GetProductsReponseModel(BaseModel):
 
 
 @router.get(
-    '/get_products',
+    '/get',
     response_model=GetProductsReponseModel,
     description='Get all products.'
 )
@@ -29,7 +29,7 @@ def get_products():
 
 
 @router.get(
-    '/product/{product_id}',
+    '/{product_id}',
     response_model=ProductResponseModel,
     description='''
         Get a specific product.
@@ -39,6 +39,6 @@ def get_products():
 def get(product_id: str):
     try:
         product = Product(product_id).get()
-    except ProductNotFoundException:
-        raise HTTPException(status_code=404, detail='Item not found')
+    except ProductNotFoundException as e:
+        raise HTTPException(status_code=e.status_code, detail=e.detail)
     return {'product': product}

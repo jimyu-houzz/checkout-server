@@ -6,7 +6,8 @@ connection_conf_d = {
     'user': "root",
     'password': "root",
     'database': 'test_db',
-    'port': 3307
+    'port': 3307,
+    'autocommit': True,
 }
 
 conn = mysql.connector.connect(**connection_conf_d)
